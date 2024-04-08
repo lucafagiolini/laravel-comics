@@ -12,7 +12,8 @@
     @vite('resources/js/app.js')
 </head>
 
-<body>
+<body data-bs-theme='dark'>
+    @include('partials.header')
     @yield('content')
 
 </body>

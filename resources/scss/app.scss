@@ -1,1 +1,58 @@
+@use "./partials/variabiles" as *;
+@use "./partials/mixins" as *;
 @import "~bootstrap/scss/bootstrap";
+
+
+header {
+    background-color: white;
+    padding: 0;
+}
+
+img {
+    height: 70px;
+
+}
+
+links-header-nav {
+    height: 100%;
+}
+
+#links-header-nav ul {
+    display: flex;
+    padding: 0 2rem 0 2rem;
+    margin: 0;
+    height: 100px;
+}
+
+#links-header-nav ul li {
+    display: flex;
+    height: 100%;
+    padding: 0 0.7rem 0 0.7rem;
+    align-items: center;
+
+    &:hover {
+        border-bottom: 4px solid $universalBlueColor;
+
+    }
+
+
+}
+
+
+
+.section-container {
+    @include my-aria-space;
+    justify-content: space-between // temporary fixfor the mix-in
+}
+
+a {
+    @include my-anchor;
+    color: rgb(20, 20, 20);
+    text-transform: uppercase;
+
+    &:hover {
+        color: $universalBlueColor;
+        transform: scale(1.1);
+        transition: transform 0.3s;
+    }
+}
